@@ -1,0 +1,7 @@
+{
+  "name": "node-winrm",
+  "version": "0.0.1",
+  "dependencies": {
+    "edge": "^6.5.1"
+  }
+}
