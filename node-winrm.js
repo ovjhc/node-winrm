@@ -1,3 +1,5 @@
+'use strict';
+
 exports.factory = function (winRM, credential) {
   // instance recreated at each call of default, this is a factory not a singleton
   var instance = {};
@@ -23,7 +25,7 @@ exports.factory = function (winRM, credential) {
       exports.psfunc(payload, function (err, result) {
         console.log("Winrm result follows");
         console.log(result);
-        callback(null, result);
+        callback(err, result);
       });
     } catch (err) {
       callback(err, null);
@@ -31,7 +33,7 @@ exports.factory = function (winRM, credential) {
   };
 
   instance.testps = function (cb) {
-    callps("'PowerShell test succeeded'", exports.payload, cb);
+    instance.callps("'PowerShell test succeeded'", exports.payload, cb);
   };
 
   return instance;

@@ -1,6 +1,7 @@
 {
   "name": "node-winrm",
-  "version": "0.0.2",
+  "description": "Make WinRM calls from node.js via edge.js",
+  "version": "0.1.2",
   "dependencies": {
     "edge": "^6.5.1"
   },
